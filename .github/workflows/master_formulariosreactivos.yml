@@ -27,12 +27,12 @@ jobs:
       run: |
         npm install
         npm run build --prod
-      working-directory: ./formularios
+      working-directory: ./dist/formularios
 
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
       with:
         app-name: formulariosreactivos       
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_93FB1215627146EDA62A875EECCF28E0 }}
-        package: .
+        package: ./dist/formularios
 
