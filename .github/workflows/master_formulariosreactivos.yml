@@ -34,5 +34,5 @@ jobs:
       with:
         app-name: formulariosreactivos       
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_93FB1215627146EDA62A875EECCF28E0 }}
-        package: ./dist/formulariosreactivos
+        package: .
 
